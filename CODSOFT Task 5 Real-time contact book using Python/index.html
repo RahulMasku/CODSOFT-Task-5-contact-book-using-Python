@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Book</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h1>Contact Information</h1>
+            <!-- Add Contact Form -->
+            <form id="addContactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <button type="button" onclick="addContact()">Add Contact</button>
+            </form>
+        </div>
+
+        <div class="column">
+            <h1>Contact List</h1>
+            <label for="search">Search:</label>
+            <input type="text" id="search" oninput="searchContacts()">
+            <ul id="contactList"></ul>
+        </div>
+
+        <!-- Update/Delete Contact Form -->
+        <form id="updateDeleteForm" style="display:none;">
+            <h2>Update/Delete Contact</h2>
+            <label for="newPhone">New Phone:</label>
+            <input type="tel" id="newPhone" name="newPhone" required>
+
+            <button type="button" onclick="updateContact()">Update Contact</button>
+            <button type="button" onclick="deleteContact()">Delete Contact</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
